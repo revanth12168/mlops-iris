@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/revanth/mlops-iris/mlruns/447804362337056756/b4930ddf04804e7e884b1fa82196dd8a/artifacts
+end_time: 1753727458408
+entry_point_name: ''
+experiment_id: '447804362337056756'
+lifecycle_stage: active
+run_id: b4930ddf04804e7e884b1fa82196dd8a
+run_name: invincible-smelt-292
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753727457280
+status: 3
+tags: []
+user_id: revanth

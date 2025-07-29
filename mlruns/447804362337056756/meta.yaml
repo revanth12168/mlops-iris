@@ -1,0 +1,6 @@
+artifact_location: file:///Users/revanth/mlops-iris/mlruns/447804362337056756
+creation_time: 1753727457219
+experiment_id: '447804362337056756'
+last_update_time: 1753727457219
+lifecycle_stage: active
+name: iris classification
