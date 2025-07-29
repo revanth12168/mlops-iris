@@ -1,0 +1,48 @@
+iname: MLOps Training Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  train-and-track:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🧾 Checkout Code
+      uses: actions/checkout@v3
+
+    - name: 🐍 Set Up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
+
+    - name: 📦 Install Requirements
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r app/requirements.txt
+        pip install dvc[s3] pyyaml
+
+    - name: 🔐 Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-south-1  # ← Change if needed
+
+    - name: 🔁 Run DVC Pipeline
+      run: |
+        dvc repro
+
+    - name: ☁️ Push to DVC Remote (S3)
+      run: |
+        dvc push
+
+    - name: 📝 Commit updated artifacts
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add dvc.lock metrics.json
+        git commit -m "Auto: update model and metrics via CI/CD" || echo "No changes to commit"
+        git push
+
