@@ -7,6 +7,8 @@ on:
 jobs:
   train-and-track:
     runs-on: ubuntu-latest
+    env:
+      MLFLOW_TRACKING_URI: file:./mlruns  # ✅ Ensures no default to /Users
 
     steps:
     - name: 🧾 Checkout Code
