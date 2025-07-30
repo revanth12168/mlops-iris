@@ -1,6 +1,7 @@
 # app/main.py
 
 from fastapi import FastAPI
+from prometheus_fastapi_instrumentator import Instrumentator
 from pydantic import BaseModel
 import joblib
 import numpy as np
@@ -25,3 +26,17 @@ def predict(input: IrisInput):
     prediction = model.predict(data)[0]
     return {"prediction": prediction}
 
+# Add metrics instrumentation
+Instrumentator().instrument(app).expose(app)
+
+class IrisInput(BaseModel):
+    sepal_length: float
+    sepal_width: float
+    petal_length: float
+    petal_width: float
+
+@app.post("/predict")
+def predict(input: IrisInput):
+    data = np.array([[input.sepal_length, input.sepal_width, input.petal_length, input.petal_width]])
+    prediction = model.predict(data)[0]
+    return {"prediction": prediction}

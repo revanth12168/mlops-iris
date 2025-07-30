@@ -8,3 +8,7 @@ stages:
     - src/model.pkl
     metrics:
     - metrics.json
+    params:
+    - train.n_estimators
+    - train.random_state
+    - train.test_size
