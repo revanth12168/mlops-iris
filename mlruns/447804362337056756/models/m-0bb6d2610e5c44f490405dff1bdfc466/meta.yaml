@@ -1,0 +1,10 @@
+artifact_location: file:///Users/revanth/mlops-iris/mlruns/447804362337056756/models/m-0bb6d2610e5c44f490405dff1bdfc466/artifacts
+creation_timestamp: 1753799163876
+experiment_id: '447804362337056756'
+last_updated_timestamp: 1753799165189
+model_id: m-0bb6d2610e5c44f490405dff1bdfc466
+model_type: null
+name: model
+source_run_id: 4a6351ebbd634b39b90b885648618d82
+status: 2
+status_message: null

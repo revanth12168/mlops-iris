@@ -1,0 +1,22 @@
+artifact_path: file:///Users/revanth/mlops-iris/mlruns/446089422587895262/models/m-46304c64040743babbea2157c8a07018/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.18
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+mlflow_version: 3.1.4
+model_id: m-46304c64040743babbea2157c8a07018
+model_size_bytes: 177384
+model_uuid: m-46304c64040743babbea2157c8a07018
+prompts: null
+run_id: 2230979cd3af4511921f50103b3335fa
+utc_time_created: '2025-07-29 14:35:45.690443'

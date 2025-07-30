@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/revanth/mlops-iris/mlruns/447804362337056756/780a359f14394a83b59b2a167e9ce208/artifacts
+end_time: 1753799264779
+entry_point_name: ''
+experiment_id: '447804362337056756'
+lifecycle_stage: active
+run_id: 780a359f14394a83b59b2a167e9ce208
+run_name: languid-shad-765
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753799263478
+status: 3
+tags: []
+user_id: revanth

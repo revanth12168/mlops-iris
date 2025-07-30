@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/revanth/mlops-iris/mlruns/447804362337056756/4a6351ebbd634b39b90b885648618d82/artifacts
+end_time: 1753799165190
+entry_point_name: ''
+experiment_id: '447804362337056756'
+lifecycle_stage: active
+run_id: 4a6351ebbd634b39b90b885648618d82
+run_name: sneaky-stork-776
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753799163819
+status: 3
+tags: []
+user_id: revanth
