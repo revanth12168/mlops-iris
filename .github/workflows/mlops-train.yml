@@ -1,4 +1,4 @@
-iname: MLOps Training Pipeline
+name: MLOps Training Pipeline
 
 on:
   push:
