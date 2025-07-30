@@ -85,7 +85,7 @@ itsdangerous==2.2.0
 Jinja2==3.1.6
 jmespath==1.0.1
 joblib==1.5.1
-kiwisolver==1.4.8
+kiwisolver==1.4.7
 kombu==5.5.4
 litestar==2.16.0
 litestar-htmx==0.5.0
