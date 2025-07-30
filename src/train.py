@@ -9,6 +9,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
+
+
+path = os.path.join(os.getcwd(), "some-folder")
+
 # Load hyperparameters
 with open("params.yaml") as f:
     params = yaml.safe_load(f)["train"]
@@ -33,6 +37,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Train
 clf = RandomForestClassifier(n_estimators=n_estimators, random_state=random_state)
+
+print("Tracking URI:", mlflow.get_tracking_uri())
 
 with mlflow.start_run():
     clf.fit(X_train, y_train)
